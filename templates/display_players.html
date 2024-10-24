@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>player info</h1>
+    <table border="2x">
+        <tr>
+            <th>pk</th>
+            <th>game_name</th>
+            <th>name</th>
+            <th>email</th>
+            <th>age</th>
+            <th>country</th>
+        </tr>
+        {% for to in EQST %}
+        <tr>
+            <td>{{to.pk}}</td>
+            <td>{{to.game_name}}</td>
+            <td>{{to.name}}</td>
+            <td>{{to.email}}</td>
+            <td>{{to.age}}</td>
+            <td>{{to.country}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>

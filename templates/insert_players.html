@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>insert_players</h1>
+    <form method="post">
+        {% csrf_token %}
+        <select name="gm" id="gm">
+            {% for ng in LOG %}
+            <option value="{{ng.game_name}}">{{ng.game_name}}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <br>
+       
+        <label for="na">name</label>
+        <input type="text" name="na" id="na"><br><br><br>
+        <label for="ag">age</label>
+        <input type="number" name="ag" id="ag"><br><br><br>
+        <label for="em">email</label>
+        <input type="email" name="em" id="em"><br><br><br>
+        <label for="co">country</label>
+        <input type="text" name="co" id="co"><br><br>
+        <br>
+        <input type="submit" value="submit">
+
+    </form>
+    
+</body>
+</html>

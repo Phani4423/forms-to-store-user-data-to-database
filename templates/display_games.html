@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>games</title>
+</head>
+<body>
+    <center>
+        <h1>
+            games reresterd 
+        </h1>
+        <table border="2px">
+            <tr>
+                <th>game_names</th>
+            </tr>
+            
+            {% for to in LOG %}
+            <tr>
+            <td>{{to.game_name}}</td>
+        </tr>
+        
+            {% endfor %}
+        </table>
+    </center>
+    
+</body>
+</html>

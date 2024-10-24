@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>select multiple games</h1>
+   <form method="post">
+    {% csrf_token %}
+    <select name="gm" id="gm" multiple>
+        {% for ng in LOG %}
+        <option value="{{ng.game_name}}">{{ng.game_name}}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+    <input type="submit" value="submit ">
+    </form>
+</body>
+</html>
